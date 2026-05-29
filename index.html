@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel D. Zaccariello, DDS — General Dentistry in Bulls Head, Staten Island</title>
+  <meta name="description"
+    content="Daniel D. Zaccariello, DDS — gentle, patient-focused general and family dentistry in Bulls Head, Staten Island. Cleanings, fillings, crowns, cosmetic dentistry and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f3f7f9;
+      --ink: #16242b;
+      --ink-soft: #51626b;
+      --brand: #0b7c8c;
+      --brand-deep: #075863;
+      --accent: #e9f4f5;
+      --line: #e2eaed;
+      --gold: #c9a14a;
+      --maxw: 1140px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box }
+    html { scroll-behavior: smooth }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Hanken Grotesk", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .serif { font-family: "Fraunces", serif }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px }
+
+    h1, h2, h3 { font-family: "Fraunces", serif; font-weight: 500; letter-spacing: -.02em; line-height: 1.1 }
+
+    a { color: inherit }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 600; font-size: .95rem;
+      padding: 14px 26px; border-radius: 999px;
+      text-decoration: none; transition: all .22s; cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--brand); color: #fff }
+    .btn-primary:hover { background: var(--brand-deep) }
+    .btn-ghost { background: transparent; color: var(--brand); border: 1.5px solid var(--brand) }
+    .btn-ghost:hover { background: var(--accent) }
+
+    /* ---- NAV ---- */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 28px; background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none }
+    .brand .mark {
+      width: 42px; height: 42px; border-radius: 11px; flex: none;
+      background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+      display: grid; place-items: center; color: #fff; font-family: "Fraunces", serif;
+      font-size: 1.25rem; font-weight: 600;
+    }
+    .brand .bn { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.15rem; line-height: 1.05 }
+    .brand .bn small { display: block; font-family: "Hanken Grotesk"; font-weight: 500; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft) }
+    .navlinks { display: flex; align-items: center; gap: 30px }
+    .navlinks a { text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: .95rem; transition: color .2s }
+    .navlinks a:hover { color: var(--brand) }
+    .nav-cta { margin-left: 6px }
+    @media(max-width:860px){ .navlinks a:not(.nav-cta){ display:none } }
+
+    /* ---- HERO ---- */
+    header.hero { background: linear-gradient(180deg, var(--bg-soft), #fff); padding: 86px 0 78px }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center }
+    @media(max-width:860px){ .hero-grid{ grid-template-columns:1fr; gap:40px } }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); margin-bottom: 18px }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--brand) }
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem) }
+    .hero p.lead { font-size: 1.2rem; color: var(--ink-soft); margin: 22px 0 32px; max-width: 46ch }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap }
+    .trust { display: flex; gap: 26px; margin-top: 36px; flex-wrap: wrap }
+    .trust .t { }
+    .trust .num { font-family: "Fraunces", serif; font-size: 1.7rem; font-weight: 600; color: var(--brand-deep) }
+    .trust .lbl { font-size: .82rem; color: var(--ink-soft) }
+    .stars { color: var(--gold); letter-spacing: 2px }
+
+    .hero-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 22px;
+      padding: 30px; box-shadow: 0 30px 60px -34px rgba(11,124,140,.5);
+    }
+    .hero-card h3 { font-size: 1.45rem; margin-bottom: 4px }
+    .hero-card .sub { color: var(--ink-soft); font-size: .92rem; margin-bottom: 20px }
+    .hours-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .95rem }
+    .hours-row:last-of-type { border-bottom: none }
+    .hours-row span:first-child { color: var(--ink-soft) }
+    .hours-row span:last-child { font-weight: 600 }
+    .hero-card .btn { width: 100%; justify-content: center; margin-top: 20px }
+
+    /* ---- SECTION ---- */
+    section { padding: 78px 0 }
+    .sec-head { text-align: center; max-width: 620px; margin: 0 auto 52px }
+    .sec-head .eyebrow { justify-content: center }
+    .sec-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem) }
+    .sec-head p { color: var(--ink-soft); margin-top: 14px }
+
+    /* ---- SERVICES ---- */
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px }
+    @media(max-width:860px){ .services{ grid-template-columns:1fr } }
+    .svc { border: 1px solid var(--line); border-radius: 18px; padding: 30px 26px; transition: all .25s; background: #fff }
+    .svc:hover { border-color: var(--brand); transform: translateY(-4px); box-shadow: 0 24px 44px -30px rgba(11,124,140,.55) }
+    .svc .ic { width: 50px; height: 50px; border-radius: 13px; background: var(--accent); display: grid; place-items: center; margin-bottom: 18px; font-size: 1.5rem }
+    .svc h3 { font-size: 1.25rem; margin-bottom: 8px }
+    .svc p { color: var(--ink-soft); font-size: .96rem }
+
+    /* ---- ABOUT ---- */
+    .about { background: var(--bg-soft) }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: center }
+    @media(max-width:860px){ .about-grid{ grid-template-columns:1fr } }
+    .about-photo { background: linear-gradient(135deg, var(--brand), var(--brand-deep)); border-radius: 22px; min-height: 340px; display: grid; place-items: center; color: #fff; text-align: center; padding: 30px }
+    .about-photo .em { font-size: 3.4rem; font-family: "Fraunces", serif }
+    .about h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 18px }
+    .about p { color: var(--ink-soft); margin-bottom: 16px }
+    .about ul { list-style: none; margin-top: 12px; display: grid; gap: 12px }
+    .about li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500 }
+    .about li .ck { color: var(--brand); font-weight: 700 }
+
+    /* ---- REVIEWS ---- */
+    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px }
+    @media(max-width:860px){ .reviews{ grid-template-columns:1fr } }
+    .rev { border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: #fff }
+    .rev .stars { font-size: 1rem; margin-bottom: 12px }
+    .rev p { font-style: italic; color: var(--ink); margin-bottom: 16px }
+    .rev .who { font-weight: 600; font-size: .92rem }
+    .rev .who small { display: block; color: var(--ink-soft); font-weight: 400 }
+
+    /* ---- CONTACT / CTA ---- */
+    .cta { background: linear-gradient(135deg, var(--brand), var(--brand-deep)); color: #fff }
+    .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center }
+    @media(max-width:860px){ .cta-grid{ grid-template-columns:1fr } }
+    .cta h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); color: #fff }
+    .cta p { color: #d6eef1; margin-top: 14px }
+    .cta .btn-primary { background: #fff; color: var(--brand-deep); margin-top: 26px }
+    .cta .btn-primary:hover { background: var(--accent) }
+    .info-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.22); border-radius: 20px; padding: 30px }
+    .info-row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.16); align-items: flex-start }
+    .info-row:last-child { border-bottom: none }
+    .info-row .ic { font-size: 1.3rem }
+    .info-row .k { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: #aed8dd }
+    .info-row .v { font-weight: 600 }
+
+    /* ---- FOOTER ---- */
+    footer { background: var(--ink); color: #9fb0b7; padding: 34px 0 }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; font-size: .9rem }
+    footer .brand .bn { color: #fff }
+    footer .brand .bn small { color: #9fb0b7 }
+
+    .note { background: #fff7e6; border: 1px dashed var(--gold); color: #6b5418; text-align: center; font-size: .85rem; padding: 10px 16px }
+  </style>
+</head>
+
+<body>
+
+  <div class="note">Sample preview — placeholder phone, hours &amp; photos are easily swapped for the practice's real details.</div>
+
+  <nav>
+    <a class="brand" href="#">
+      <span class="mark">Z</span>
+      <span class="bn">Zaccariello Dental<small>General &amp; Family Dentistry</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+17185550000" class="btn btn-primary nav-cta">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Bulls Head · Staten Island</span>
+        <h1 class="serif">Gentle, modern dentistry for the whole family.</h1>
+        <p class="lead">Dr. Daniel D. Zaccariello and our team provide comfortable, patient-first dental
+          care — from routine cleanings to cosmetic and restorative treatment.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+          <a href="tel:+17185550000" class="btn btn-ghost">Call (718) 555-0000</a>
+        </div>
+        <div class="trust">
+          <div class="t"><div class="num">4.6<span class="stars"> ★</span></div><div class="lbl">Yelp rating · 27 reviews</div></div>
+          <div class="t"><div class="num">20+</div><div class="lbl">Years serving Staten Island</div></div>
+          <div class="t"><div class="num">Same-day</div><div class="lbl">Emergency visits</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 class="serif">Office Hours</h3>
+        <p class="sub">Walk-ins welcome · New patients accepted</p>
+        <div class="hours-row"><span>Monday – Thursday</span><span>9:00 AM – 7:00 PM</span></div>
+        <div class="hours-row"><span>Friday</span><span>9:00 AM – 4:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>By appointment</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        <a href="#contact" class="btn btn-primary">Request a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What we do</span>
+        <h2 class="serif">Comprehensive care under one roof</h2>
+        <p>Everything your family needs to keep healthy, confident smiles — using modern, comfortable techniques.</p>
+      </div>
+      <div class="services">
+        <div class="svc"><div class="ic">🦷</div><h3 class="serif">General &amp; Preventive</h3><p>Cleanings, exams, digital X-rays, and fillings to keep small issues small.</p></div>
+        <div class="svc"><div class="ic">✨</div><h3 class="serif">Cosmetic Dentistry</h3><p>Teeth whitening, veneers, and bonding to brighten and reshape your smile.</p></div>
+        <div class="svc"><div class="ic">👑</div><h3 class="serif">Crowns &amp; Bridges</h3><p>Durable, natural-looking restorations to repair and replace damaged teeth.</p></div>
+        <div class="svc"><div class="ic">🪥</div><h3 class="serif">Family Dentistry</h3><p>Gentle care for every age, from a child's first visit to senior dental health.</p></div>
+        <div class="svc"><div class="ic">😬</div><h3 class="serif">Clear Aligners</h3><p>Discreet, comfortable orthodontic options to straighten teeth without metal.</p></div>
+        <div class="svc"><div class="ic">🚑</div><h3 class="serif">Emergency Care</h3><p>Same-day appointments for toothaches, chips, and dental emergencies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="about-photo"><div><div class="em">Z</div><div style="margin-top:10px;font-weight:600">Daniel D. Zaccariello, DDS</div><div style="opacity:.85;font-size:.9rem">General Dentist</div></div></div>
+      <div>
+        <span class="eyebrow">Meet the dentist</span>
+        <h2 class="serif">Care you can trust, close to home</h2>
+        <p>For over two decades, Dr. Zaccariello has built a reputation in Bulls Head for honest,
+          attentive care. Patients consistently describe the practice as professional, kind, and genuinely
+          focused on their comfort.</p>
+        <ul>
+          <li><span class="ck">✓</span> A calm, judgment-free environment for nervous patients</li>
+          <li><span class="ck">✓</span> Clear explanations — you'll always know your options</li>
+          <li><span class="ck">✓</span> Most insurance plans accepted · Apple Pay &amp; contactless welcome</li>
+          <li><span class="ck">✓</span> Convenient Staten Island location with easy parking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Patient reviews</span>
+        <h2 class="serif">What our patients say</h2>
+        <p>Rated 4.6 out of 5 across 27 verified reviews.</p>
+      </div>
+      <div class="reviews">
+        <div class="rev"><div class="stars">★★★★★</div><p>"Very professional and kind staff. The doctor loves what he does and it shows. Very attentive, kind, and honest."</p><div class="who">Eweka Y.<small>Verified patient</small></div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>"Always a great experience. They take the time to explain everything and never push unnecessary work."</p><div class="who">Sample Review<small>Replace with a real review</small></div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>"Brought my whole family here. Gentle, friendly, and the office is spotless. Highly recommend."</p><div class="who">Sample Review<small>Replace with a real review</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="cta">
+    <div class="wrap cta-grid">
+      <div>
+        <span class="eyebrow" style="color:#aed8dd">Get in touch</span>
+        <h2 class="serif">Ready for a healthier smile?</h2>
+        <p>New patients are always welcome. Call us or stop by — we'll find a time that works for you.</p>
+        <a href="tel:+17185550000" class="btn btn-primary">Call (718) 555-0000</a>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><span class="ic">📍</span><div><div class="k">Address</div><div class="v">Bulls Head, Staten Island, NY<br>[Street address here]</div></div></div>
+        <div class="info-row"><span class="ic">📞</span><div><div class="k">Phone</div><div class="v">(718) 555-0000</div></div></div>
+        <div class="info-row"><span class="ic">🕒</span><div><div class="k">Hours</div><div class="v">Mon–Thu 9–7 · Fri 9–4 · Sat by appt.</div></div></div>
+        <div class="info-row"><span class="ic">💳</span><div><div class="k">Payments</div><div class="v">Most insurance · Apple Pay · Contactless</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="#"><span class="mark">Z</span><span class="bn">Zaccariello Dental<small>Bulls Head · Staten Island</small></span></a>
+      <span>© 2026 Daniel D. Zaccariello, DDS · Sample site</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
